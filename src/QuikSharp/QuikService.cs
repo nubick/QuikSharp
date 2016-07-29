@@ -501,5 +501,9 @@ namespace QuikSharp {
             return (response as TResponse);
         }
 
+        public bool IsLuaConnected()
+        {
+            return _responseClient != null && _responseClient.Connected;
+        }
     }
 }

@@ -50,6 +50,8 @@ namespace QuikSharp {
         /// </summary>
         /// <param name="startCorrelationId">Стартовое значение.</param>
         void InitializeCorrelationId(int startCorrelationId);
+
+        bool IsLuaConnected();
     }
 
     /// <summary>
@@ -113,6 +115,11 @@ namespace QuikSharp {
         public void InitializeCorrelationId(int startCorrelationId)
         {
             QuikService.InitializeCorrelationId(startCorrelationId);
+        }
+
+        public bool IsLuaConnected()
+        {
+            return QuikService.IsLuaConnected();
         }
     }
 }
